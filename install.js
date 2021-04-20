@@ -104,8 +104,8 @@ if(os.platform() === 'win32') {
 var precommitContent = '#!/usr/bin/env bash' + os.EOL
   + 'if [ -f ' + hookRelativeUnixPath + ' ]; then' + os.EOL
   + '  ' + hookRelativeUnixPath + os.EOL
-  + 'elif [ -f ${pwd}/' + hookRelativeUnixPath + ' ]; then' + os.EOL
-  + '  cd ${pwd}' + os.EOL
+  + 'elif [ -f ${PWD}/' + hookRelativeUnixPath + ' ]; then' + os.EOL
+  + '  cd ${PWD}' + os.EOL
   + '  ' + hookRelativeUnixPath + os.EOL
   + 'fi' + os.EOL
   + 'RESULT=$?' + os.EOL
