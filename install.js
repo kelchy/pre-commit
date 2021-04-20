@@ -105,7 +105,8 @@ var precommitContent = '#!/usr/bin/env bash' + os.EOL
   + 'if [ -f ' + hookRelativeUnixPath + ' ]; then' + os.EOL
   + '  ' + hookRelativeUnixPath + os.EOL
   + 'elif [ -f ${pwd}/' + hookRelativeUnixPath + ' ]; then' + os.EOL
-  + '  ${pwd}/' + hookRelativeUnixPath + os.EOL
+  + '  cd ${pwd}' + os.EOL
+  + '  ' + hookRelativeUnixPath + os.EOL
   + 'fi' + os.EOL
   + 'RESULT=$?' + os.EOL
   + '[ $RESULT -ne 0 ] && exit 1' + os.EOL
