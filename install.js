@@ -101,11 +101,14 @@ if(os.platform() === 'win32') {
   hookRelativeUnixPath = hookRelativeUnixPath.replace(/[\\\/]+/g, '/');
 }
 
+// TODO: this will break windows env
+var cwd = process.cwd();
 var precommitContent = '#!/usr/bin/env bash' + os.EOL
+  + 'BASE=$(basename ' + cwd + ')' + os.EOL
   + 'if [ -f ' + hookRelativeUnixPath + ' ]; then' + os.EOL
   + '  ' + hookRelativeUnixPath + os.EOL
-  + 'elif [ -f ${PWD}/' + hookRelativeUnixPath + ' ]; then' + os.EOL
-  + '  cd ${PWD}' + os.EOL
+  + 'elif [ -f ./${BASE}/' + hookRelativeUnixPath + ' ]; then' + os.EOL
+  + '  cd ./${BASE}' + os.EOL
   + '  ' + hookRelativeUnixPath + os.EOL
   + 'fi' + os.EOL
   + 'RESULT=$?' + os.EOL
