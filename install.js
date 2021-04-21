@@ -102,9 +102,8 @@ if(os.platform() === 'win32') {
 }
 
 // TODO: this will break windows env
-var cwd = process.cwd();
 var precommitContent = '#!/usr/bin/env bash' + os.EOL
-  + 'BASE=$(basename ' + cwd + ')' + os.EOL
+  + 'BASE=$(basename ' + root + ')' + os.EOL
   + 'if [ -f ' + hookRelativeUnixPath + ' ]; then' + os.EOL
   + '  ' + hookRelativeUnixPath + os.EOL
   + 'elif [ -f ./${BASE}/' + hookRelativeUnixPath + ' ]; then' + os.EOL
