@@ -1,5 +1,5 @@
 {
-  "name": "@CirclesLife/pre-commit",
+  "name": "@circleslife/pre-commit",
   "version": "1.2.2",
   "description": "Automatically install pre-commit hooks for your npm modules.",
   "main": "index.js",
