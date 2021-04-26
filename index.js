@@ -182,7 +182,7 @@ Hook.prototype.initialize = function initialize() {
   try {
     this.json = require(path.join(this.root, 'package.json'));
     this.parse();
-  } catch () {
+  } catch (e) {
     try {
       this.json = require(path.join(process.cwd(), 'package.json'));
       this.root = process.cwd();
