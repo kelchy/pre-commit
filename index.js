@@ -182,7 +182,14 @@ Hook.prototype.initialize = function initialize() {
   try {
     this.json = require(path.join(this.root, 'package.json'));
     this.parse();
-  } catch (e) { return this.log(this.format(Hook.log.json, e.message), 0); }
+  } catch () {
+    try {
+      this.json = require(path.join(process.cwd(), 'package.json'));
+      this.root = process.cwd();
+      this.parse();
+    } catch (e) {
+      return this.log(this.format(Hook.log.json, e.message), 0); }
+  }
 
   //
   // We can only check for changes after we've parsed the package.json as it
