@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/CirclesLife/pre-commit.git"
+    "url": "git://github.com/circleslife/pre-commit.git"
   },
   "keywords": [
     "git",
@@ -27,7 +27,7 @@
     "development"
   ],
   "author": "Arnout Kazemier <opensource@observe.it>",
-  "homepage": "https://github.com/CirclesLife/pre-commit",
+  "homepage": "https://github.com/circleslife/pre-commit",
   "license": "MIT",
   "dependencies": {
     "cross-spawn": "^5.0.1",
@@ -38,6 +38,6 @@
     "assume": "~1.5.0",
     "istanbul": "0.4.x",
     "mocha": "~3.3.0",
-    "pre-commit": "git://github.com/CirclesLife/pre-commit.git"
+    "@circleslife/pre-commit": "git://github.com/circleslife/pre-commit.git"
   }
 }
