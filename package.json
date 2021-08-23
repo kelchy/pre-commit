@@ -1,5 +1,5 @@
 {
-  "name": "@circleslife/pre-commit",
+  "name": "@kelchy/pre-commit",
   "version": "1.2.4",
   "description": "Automatically install pre-commit hooks for your npm modules.",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/circleslife/pre-commit.git"
+    "url": "git://github.com/kelchy/pre-commit.git"
   },
   "keywords": [
     "git",
@@ -27,7 +27,7 @@
     "development"
   ],
   "author": "Arnout Kazemier <opensource@observe.it>",
-  "homepage": "https://github.com/circleslife/pre-commit",
+  "homepage": "https://github.com/kelchy/pre-commit",
   "license": "MIT",
   "dependencies": {
     "cross-spawn": "^5.0.1",
